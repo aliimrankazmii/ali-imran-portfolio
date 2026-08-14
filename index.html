@@ -30,6 +30,8 @@
       </div>
       <div class="hero-card" aria-label="Professional summary">
         <div class="card-glow"></div>
+        <span class="float-chip chip-one">Inventory logs</span>
+        <span class="float-chip chip-two">AI-assisted work</span>
         <p class="card-label">Professional focus</p>
         <h2>Warehouse<br>Inventory<br>Operations</h2>
         <div class="card-line"></div>
@@ -73,10 +75,22 @@
       <p class="eyebrow">Let’s connect</p>
       <h2>Looking for a dependable operations professional?</h2>
       <p>Available for Warehouse Assistant, Storekeeper, Inventory Assistant, Operations Assistant, Data Entry, Billing, Document Control and Maintenance Support opportunities.</p>
-      <div class="actions"><a class="button primary" href="mailto:aliimranoficial@gmail.com">aliimranoficial@gmail.com <span>↗</span></a><a class="button secondary" href="https://www.linkedin.com/in/ali-imran-237bb4104/" target="_blank" rel="noreferrer">LinkedIn profile</a></div>
+      <div class="actions"><button class="button primary" id="contactOpen" type="button">Open contact card <span>↗</span></button><a class="button secondary" href="https://www.linkedin.com/in/ali-imran-237bb4104/" target="_blank" rel="noreferrer">LinkedIn profile</a></div>
     </section>
   </main>
 
+  <div class="modal" id="contactModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><div class="modal-card"><button class="modal-close" id="contactClose" type="button" aria-label="Close contact card">×</button><p class="eyebrow">Direct contact</p><h2 id="modalTitle">Let’s talk opportunities.</h2><p>For employer-sponsored roles and relocation opportunities in Malta or Europe.</p><a class="button primary" href="mailto:aliimranoficial@gmail.com">aliimranoficial@gmail.com <span>↗</span></a></div></div>
   <footer class="footer shell"><span>© 2026 Ali Imran</span><span>Warehouse · Inventory · Operations</span></footer>
+  <script>
+    const revealItems = document.querySelectorAll('.section, .stats, .capability, .timeline-item');
+    const observer = new IntersectionObserver(entries => entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('is-visible'); }), { threshold: .12 });
+    revealItems.forEach(item => { item.classList.add('reveal'); observer.observe(item); });
+    const modal = document.getElementById('contactModal');
+    document.getElementById('contactOpen').addEventListener('click', () => { modal.classList.add('open'); modal.setAttribute('aria-hidden', 'false'); });
+    const closeModal = () => { modal.classList.remove('open'); modal.setAttribute('aria-hidden', 'true'); };
+    document.getElementById('contactClose').addEventListener('click', closeModal);
+    modal.addEventListener('click', event => { if (event.target === modal) closeModal(); });
+    document.addEventListener('keydown', event => { if (event.key === 'Escape') closeModal(); });
+  </script>
 </body>
 </html>
