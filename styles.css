@@ -20,3 +20,7 @@
 .project-link{display:inline-flex;align-items:center;justify-content:space-between;width:max-content;min-width:180px;gap:30px;padding:12px 14px;border:1px solid #5e7b67;color:var(--ink);text-decoration:none;transition:.25s}
 .project-link:hover{background:var(--lime);border-color:var(--lime);color:#071009;transform:translateY(-3px)}
 @media(max-width:800px){.project-grid{grid-template-columns:1fr}.project-card{min-height:320px}.project-card h3{margin-top:55px}}
+
+.portrait-social a::before{content:attr(data-icon);display:block;color:var(--ink);font:700 11px/1 'Space Grotesk';letter-spacing:-.5px}
+.portrait-social a:hover::before{color:#071009}
+.stats .projects-stat span{color:var(--lime);font-weight:700}
