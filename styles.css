@@ -82,3 +82,11 @@ h1 em{display:inline-block;animation:impactGlow 3.4s ease-in-out 1.1s infinite}
 .portrait-social a{background:transparent;box-shadow:none;animation:socialPop .62s cubic-bezier(.2,.9,.25,1.35) forwards;animation-delay:calc(.48s + var(--social-index)*.08s)}
 .portrait-social a:hover{background:var(--brand);box-shadow:0 10px 24px color-mix(in srgb,var(--brand) 35%,transparent)}
 @media(max-width:800px){.portrait-social{bottom:-2px}}
+
+/* Forced no-dock layout: cache-busted from index.html */
+.portrait-overlay{bottom:74px!important;z-index:5!important}
+.portrait-overlay span{color:#f4f7f2!important;opacity:1!important;visibility:visible!important;text-shadow:0 2px 14px #000,0 0 8px #000!important}
+.portrait-social{bottom:-22px!important;padding:0!important;background:none!important;background-color:transparent!important;background-image:none!important;border:0!important;box-shadow:none!important;backdrop-filter:none!important;-webkit-backdrop-filter:none!important}
+.portrait-social a{background:none!important;background-color:transparent!important;box-shadow:none!important}
+.portrait-social a:hover{background:var(--brand)!important;background-color:var(--brand)!important}
+@media(max-width:800px){.portrait-social{bottom:-12px!important}}
