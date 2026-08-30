@@ -74,3 +74,11 @@ h1 em{display:inline-block;animation:impactGlow 3.4s ease-in-out 1.1s infinite}
 
 @media(max-width:800px){.portrait-wrap::after{width:340px;height:340px;right:50%;transform:translateX(50%)}.portrait-social{right:3px;transform:scale(.82);transform-origin:right bottom}}
 @media(max-width:480px){.portrait-social{right:-3px;bottom:8px;transform:scale(.7)}.portrait-wrap::after{width:285px;height:285px}}
+
+/* Caption visibility and transparent social dock */
+.portrait-overlay{bottom:66px;z-index:4}
+.portrait-overlay span{color:#f4f7f2;font-size:11px;font-weight:600;opacity:1;text-shadow:0 2px 14px #000,0 0 8px #000;margin-top:7px}
+.portrait-social{bottom:-8px;padding:0;background:transparent;border:0;box-shadow:none;backdrop-filter:none;-webkit-backdrop-filter:none}
+.portrait-social a{background:transparent;box-shadow:none;animation:socialPop .62s cubic-bezier(.2,.9,.25,1.35) forwards;animation-delay:calc(.48s + var(--social-index)*.08s)}
+.portrait-social a:hover{background:var(--brand);box-shadow:0 10px 24px color-mix(in srgb,var(--brand) 35%,transparent)}
+@media(max-width:800px){.portrait-social{bottom:-2px}}
